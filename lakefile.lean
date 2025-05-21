@@ -9,8 +9,9 @@ open Lake DSL
 
 require "leanprover-community" / "batteries" @ git "main"
 require "leanprover-community" / "Qq" @ git "master"
-require "leanprover-community" / "aesop" @ git "master"
-require "leanprover-community" / "proofwidgets" @ git "v0.0.56" -- ProofWidgets should always be pinned to a specific version
+require "vnh1806" / "aesop" @ git "rpinf-branch2" -- change to my repo, run lake update aesop in terminal, set
+  from git "https://github.com/vnh1806/aesop" @ "rpinf-branch2"
+require "leanprover-community" / "proofwidgets" @ git "v0.0.53" --v1.1.0?? correct version? -- ProofWidgets should always be pinned to a specific version
   with NameMap.empty.insert `errorOnBuild
     "ProofWidgets not up-to-date. \
     Please run `lake exe cache get` to fetch the latest ProofWidgets. \
@@ -42,9 +43,8 @@ abbrev mathlibOnlyLinters : Array LeanOption := #[
   -- `latest_import.yml` uses this comment: if you edit it, make sure that the workflow still works
   ⟨`linter.style.missingEnd, true⟩,
   ⟨`linter.style.multiGoal, true⟩,
-  ⟨`linter.style.openClassical, true⟩,
-  ⟨`linter.style.refine, true⟩,
-  ⟨`linter.style.setOption, true⟩
+  ⟨`linter.style.setOption, true⟩,
+  ⟨`aesop.collectStats, true⟩, --
 ]
 
 /-- These options are passed as `leanOptions` to building mathlib, as well as the
