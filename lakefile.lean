@@ -49,7 +49,7 @@ abbrev mathlibOnlyLinters : Array LeanOption := #[
   ⟨`aesop.collectStatsSkipTypes, true⟩,
   ⟨`aesop.collectStatsSkipImplicitArguments, true⟩,
   ⟨`aesop.collectStatsRpinf, true⟩,
-  ⟨`maxHeartbeats, .ofNat 4000000⟩  --
+  ⟨`maxHeartbeats, .ofNat 200000⟩  --
 ]
 
 /-- These options are passed as `leanOptions` to building mathlib, as well as the
