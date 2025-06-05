@@ -45,7 +45,7 @@
    "type": "git",
    "subDir": null,
    "scope": "vnh1806",
-   "rev": "f034506feae6648fc0e7d2ace4d7d2360a4ccc56",
+   "rev": "35dae51d8d46fdfc36a209334c614b9a7d344c38",
    "name": "aesop",
    "manifestFile": "lake-manifest.json",
    "inputRev": "my-thesis",
